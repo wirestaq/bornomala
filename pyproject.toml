@@ -1,5 +1,5 @@
 [project]
-name = "bornomala"
+name = "bornomala-py"
 version = "0.1.0"
 description = "Bangla text toolkit — numbers, digits, dates, and more."
 readme = "README.md"
@@ -42,6 +42,9 @@ Repository    = "https://github.com/wirestaq/bornomala"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bornomala"]
 
 [dependency-groups]
 dev = [
