@@ -1,0 +1,61 @@
+[project]
+name = "bornomala"
+version = "0.1.0"
+description = "Bangla text toolkit — numbers, digits, dates, and more."
+readme = "README.md"
+authors = [
+    { name = "Nahid", email = "nahidscript@proton.me" }
+]
+# Library runtime: 3.5+ (typing module, no f-strings, no variable annotations).
+# Dev tooling (tox 4, pytest 9) requires 3.10+; expressed via markers below.
+requires-python = ">=3.5"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    # pytest version bounds per interpreter (markers satisfy uv cross-version resolution)
+    "pytest>=9; python_version >= '3.10'",
+    "pytest>=8,<9; python_version >= '3.8' and python_version < '3.10'",
+    "pytest>=7,<8; python_version == '3.7.*'",
+    "pytest>=6,<7; python_version == '3.6.*'",
+    "pytest>=5,<6; python_version == '3.5.*'",
+    # tox 4 + tox-uv require Python 3.10+
+    "tox>=4.49.1; python_version >= '3.10'",
+    "tox-uv>=1.33.2; python_version >= '3.10'",
+    "pytest-cov>=2.12.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.tox]
+# tox runner requires Python 3.10+.
+# Test venvs for py35–py37 need those interpreters system-installed
+# (uv only manages 3.8+); they are skipped automatically if absent.
+env_list = ["py35", "py36", "py37", "py38", "py39", "py310", "py311", "py312", "py313"]
+skip_missing_interpreters = true
+
+[tool.tox.env_run_base]
+runner = "uv-venv-runner"
+deps = ["pytest>=9"]
+commands = [["pytest", "tests/", "-v"]]
+
+# Per-interpreter pytest version pins
+[tool.tox.env.py35]
+deps = ["pytest>=5,<6"]
+
+[tool.tox.env.py36]
+deps = ["pytest>=6,<7"]
+
+[tool.tox.env.py37]
+deps = ["pytest>=7,<8"]
+
+[tool.tox.env.py38]
+deps = ["pytest>=8,<9"]
+
+[tool.tox.env.py39]
+deps = ["pytest>=8,<9"]
