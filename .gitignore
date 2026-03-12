@@ -14,3 +14,8 @@ wheels/
 .coverage
 htmlcov/
 .pytest_cache/
+
+# Hugo build output
+docs/public/
+docs/resources/
+docs/.hugo_build.lock

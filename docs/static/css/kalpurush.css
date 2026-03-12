@@ -1,0 +1,160 @@
+/* ── Kalpurush font ───────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Kalpurush';
+  src: url('/bornomala/fonts/Kalpurush.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Apply Kalpurush to all prose text ───────────────────────────────────── */
+body,
+.book-page,
+.markdown,
+.book-menu nav,
+.book-toc nav,
+h1, h2, h3, h4, h5, h6,
+p, li, td, th, blockquote {
+  font-family: 'Kalpurush', 'Noto Sans Bengali', 'SolaimanLipi', 'Vrinda', sans-serif;
+}
+
+/* ── Keep monospace for code ─────────────────────────────────────────────── */
+code, pre, kbd, samp,
+.highlight code {
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* ── Better line height for Bangla text ──────────────────────────────────── */
+.markdown p,
+.markdown li,
+.markdown td,
+.markdown blockquote {
+  line-height: 1.9;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* ── Accent colour — deep red (similar to Bangladesh flag) ───────────────── */
+:root {
+  --color-link: #c0392b;
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: #922b21;
+  text-decoration: underline;
+}
+
+/* ── Sidebar nav ─────────────────────────────────────────────────────────── */
+.book-menu nav a.active,
+.book-menu nav a:hover {
+  color: var(--color-link);
+}
+
+/* ── Code block tweaks ───────────────────────────────────────────────────── */
+.highlight {
+  border-radius: 6px;
+  margin: 1.2em 0;
+}
+
+/* ── Inline code ─────────────────────────────────────────────────────────── */
+code:not(.language-python):not(.language-bash) {
+  background: #f5f0ff;
+  color: #5b21b6;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+/* ── Callout / hint boxes ────────────────────────────────────────────────── */
+blockquote {
+  border-left: 4px solid var(--color-link);
+  background: #fdf6f6;
+  padding: 0.8em 1.2em;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.markdown table th {
+  background: #f8f4ff;
+  font-weight: 600;
+  border-bottom: 2px solid #d1c4e9;
+}
+
+.markdown table td,
+.markdown table th {
+  padding: 0.55em 0.9em;
+  border: 1px solid #e8e0f0;
+}
+
+.markdown table tr:nth-child(even) td {
+  background: #fdfbff;
+}
+
+/* ── Hero on homepage ────────────────────────────────────────────────────── */
+.bornomala-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.bornomala-hero .logo {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-link);
+  line-height: 1.1;
+}
+
+.bornomala-hero .tagline {
+  font-size: 1.25rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.bornomala-hero .badge-row {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.feature-card {
+  border: 1px solid #e8e0f0;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  background: #fdfbff;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--color-link);
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}

@@ -1,0 +1,33 @@
+baseURL       = "https://wirestaq.github.io/bornomala/"
+languageCode  = "bn"
+title         = "bornomala"
+[module]
+  [[module.imports]]
+    path = "github.com/alex-shpak/hugo-book"
+
+[params]
+  BookTheme        = "light"
+  BookToC          = true
+  BookSearch       = true
+  BookLogo         = ""
+  BookMenuBundle   = ""
+  BookSection      = "docs"
+  BookRepo         = "https://github.com/wirestaq/bornomala"
+  BookEditPath     = "edit/master/docs/content"
+  BookDateFormat   = "2006-01-02"
+  BookDescription  = "বর্ণমালা — Bangla text toolkit for Python"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style          = "dracula"
+  lineNos        = false
+  noClasses      = true
+
+[menu]
+  [[menu.before]]
+    name       = "GitHub"
+    url        = "https://github.com/wirestaq/bornomala"
+    weight     = 10
+    identifier = "github"
