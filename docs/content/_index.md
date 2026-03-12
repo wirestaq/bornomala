@@ -51,7 +51,7 @@ pip install bornomala-py
   </div>
   <div class="feature-card">
     <h3>✏️ Text utilities</h3>
-    <p>NFC normalisation, danda repair, whitespace cleanup, script detection, and character counting.</p>
+    <p>NFC normalisation, daari repair, whitespace cleanup, script detection, and character counting.</p>
   </div>
 </div>
 

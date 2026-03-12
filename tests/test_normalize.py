@@ -19,7 +19,7 @@ def test_normalize_strips_ends():
     assert normalize("  বাংলা  ") == "বাংলা"
 
 
-def test_normalize_pipe_to_danda_between_bangla():
+def test_normalize_pipe_to_daari_between_bangla():
     assert normalize("এক|দুই") == "এক।দুই"
 
 

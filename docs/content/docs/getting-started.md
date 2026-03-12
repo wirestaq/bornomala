@@ -121,7 +121,7 @@ bd.season     # 'বসন্ত'
 from bornomala import normalize, is_bangla, is_pure_bangla, bangla_char_count
 
 normalize("আমার  সোনার  বাংলা")   # 'আমার সোনার বাংলা'
-normalize("এক|দুই")              # 'এক।দুই'  (pipe → danda)
+normalize("এক|দুই")              # 'এক।দুই'  (pipe → daari)
 is_bangla("hello আমি")           # True
 is_pure_bangla("আমার বাংলা।")    # True
 bangla_char_count("hello আমি")   # 3

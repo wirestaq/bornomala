@@ -183,9 +183,9 @@ Clean, detect, and analyse Bangla Unicode text.
 ```python
 from bornomala import normalize, is_bangla, is_pure_bangla, bangla_char_count
 
-# NFC normalisation + whitespace collapse + danda repair
+# NFC normalisation + whitespace collapse + daari repair
 normalize("আমার  সোনার  বাংলা")   # 'আমার সোনার বাংলা'
-normalize("এক|দুই")              # 'এক।দুই'   ← pipe → danda (OCR fix)
+normalize("এক|দুই")              # 'এক।দুই'   ← pipe → daari (OCR fix)
 
 # Script detection
 is_bangla("hello আমি")           # True
@@ -218,7 +218,7 @@ bangla_char_count("hello আমি")  # 3
 | `BanglaCalendarDate` | calendar | Bangla calendar date object |
 | `gregorian_to_bangla(date)` | calendar | Gregorian → বঙ্গাব্দ |
 | `bangla_to_gregorian(bdate)` | calendar | বঙ্গাব্দ → Gregorian |
-| `normalize(text)` | text | NFC + whitespace + danda repair |
+| `normalize(text)` | text | NFC + whitespace + daari repair |
 | `is_bangla(text)` | text | Detect any Bangla characters |
 | `is_pure_bangla(text)` | text | Detect exclusively Bangla text |
 | `bangla_char_count(text)` | text | Count Bangla characters |

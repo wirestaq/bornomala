@@ -18,8 +18,8 @@ def normalize(text):
 
     1. **NFC normalization** — canonical composition (the standard form for
        storing and comparing Unicode text).
-    2. **Danda fix** — replaces the ASCII pipe ``|`` (a common OCR artefact in
-       scanned Bangla documents) with the proper Bangla danda ``।``
+    2. **daari fix** — replaces the ASCII pipe ``|`` (a common OCR artefact in
+       scanned Bangla documents) with the proper Bangla daari ``।``
        *only* when it appears in an otherwise-Bangla context (surrounded by
        Bangla characters or whitespace).
     3. **Whitespace normalisation** — collapses multiple consecutive spaces
@@ -32,13 +32,13 @@ def normalize(text):
 
         >>> normalize("আমার  সোনার  বাংলা")   # extra spaces
         'আমার সোনার বাংলা'
-        >>> normalize("এক|দুই")               # pipe → danda
+        >>> normalize("এক|দুই")               # pipe → daari
         'এক।দুই'
     """
     # 1. NFC
     text = unicodedata.normalize("NFC", text)
 
-    # 2. Replace ASCII pipe | → danda । when flanked by Bangla/whitespace
+    # 2. Replace ASCII pipe | → daari । when flanked by Bangla/whitespace
     if "|" in text:
         result = []
         for i, ch in enumerate(text):

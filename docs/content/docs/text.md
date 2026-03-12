@@ -18,7 +18,7 @@ from bornomala import normalize, is_bangla, is_pure_bangla, bangla_char_count
 Clean and normalise Bangla Unicode text. Applies three fixes in order:
 
 1. **NFC normalisation** — canonical Unicode composition (the standard form for storing and comparing Bangla text).
-2. **Danda repair** — replaces the ASCII pipe `|` with the Bangla danda `।` when it appears in a Bangla context. This is a common OCR artefact in scanned documents.
+2. **daari repair** — replaces the ASCII pipe `|` with the Bangla daari `।` when it appears in a Bangla context. This is a common OCR artefact in scanned documents.
 3. **Whitespace collapse** — collapses consecutive spaces (including no-break spaces U+00A0) to a single space, and strips leading/trailing whitespace.
 
 **Signature**
@@ -36,7 +36,7 @@ normalize("আমার  সোনার  বাংলা")   # 'আমার �
 # Strip leading/trailing whitespace
 normalize("  বাংলা  ")            # 'বাংলা'
 
-# Pipe → danda (Bangla context)
+# Pipe → daari (Bangla context)
 normalize("এক|দুই")              # 'এক।দুই'
 
 # Pipe NOT replaced in Latin context
