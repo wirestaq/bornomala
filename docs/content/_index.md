@@ -17,7 +17,7 @@ type: docs
 **bornomala** (বর্ণমালা — *garland of letters*) is a zero-dependency Python library for working with Bangla text: numbers, digits, dates, the Bangla calendar, ordinals, currency, and Unicode utilities.
 
 ```bash
-pip install bornomala
+pip install bornomala-py
 ```
 
 ---
@@ -106,9 +106,9 @@ is_bangla("hello আমি")            # True
 
 | Manager | Command |
 |---------|---------|
-| pip | `pip install bornomala` |
-| uv | `uv add bornomala` |
-| poetry | `poetry add bornomala` |
+| pip | `pip install bornomala-py` |
+| uv | `uv add bornomala-py` |
+| poetry | `poetry add bornomala-py` |
 
 Requires **Python 3.5 +** with no runtime dependencies.
 

@@ -10,19 +10,19 @@ weight: 1
 Install from PyPI (Python 3.5+ required, no extra dependencies):
 
 ```bash
-pip install bornomala
+pip install bornomala-py
 ```
 
 With [uv](https://github.com/astral-sh/uv):
 
 ```bash
-uv add bornomala
+uv add bornomala-py
 ```
 
 With Poetry:
 
 ```bash
-poetry add bornomala
+poetry add bornomala-py
 ```
 
 ---

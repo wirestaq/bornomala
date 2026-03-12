@@ -27,12 +27,12 @@
 ## Installation
 
 ```bash
-pip install bornomala
+pip install bornomala-py
 ```
 
 ```bash
-uv add bornomala          # uv
-poetry add bornomala      # Poetry
+uv add bornomala-py          # uv
+poetry add bornomala-py      # Poetry
 ```
 
 ---
